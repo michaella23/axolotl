@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axolotl Mileage</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Axolotl Mileage</title>
+</head>
+<body>
+    <button id="sign-out-btn" class="logout-el">Sign out</button>
+    <div class="login-modal">
+        <h1 class="modal-heading">Axolotl Mileage</h1>
+        <div class="axolotl">
+          <img src="axolotl.jpg" alt="hand drawn axolotl on a dark blue background" class="axolotl-img">
+        </div>
+        <div class="login">
+          <h2 class="btn-label">Track your swimming</h2>
+          <button id="sign-in-with-google-btn" class="provider-btn login-el">
+              <img src="google.png" class="google-logo" alt="google logo">
+              Sign in with Google
+          </button>
+        </div>
+    </div>
+    <!-- <label for="name">Name:</label>
+    <input type="text" id="name" class="login-el"/>
+    <label for="email">Email address:</label>
+    <input type="email" id="email" class="login-el"/>
+    <label for="password">Password:</label>
+    <input type="password" id="password" class="login-el">
+    <button id="sign-in-btn" class="login-el">Sign in</button>
+    <button id="create-account-btn" class="login-el">Create Account</button> -->
+    <main>
+        <h1>Lap Tracker</h1>
+        <form id="form-el" class="tracker-form">
+            <label for="date-el">Date:</label>
+            <input type="date" id="date-el" name="date" required />
+            <label for="pool-name">Pool:</label>
+            <select name="pool" id="pool-name" required>
+                <option value="select">- Pick a pool -</option>
+                <option value="bart">Bartholomew</option>
+                <option value="stacy">Big Stacy</option>
+                <option value="eddy">Deep Eddy</option>
+                <option value="shipe">Shipe</option>
+                <option value="ramsey">Ramsey</option>
+                <option value="northwest">Northwest</option>
+                <option value="other" id="other">Other</option>
+            </select>
+
+            <div id="other-pool-form" class="other-pool-form">
+              <div>
+                <h2 class="details">Pool details</h2>
+                <label for="other-pool-name">Pool:</label>
+                <input type="text" id="other-pool-name" class="other-pool-name" name="other-pool-name" />
+                <div class="distance-el">
+                  <div>
+                    <label for="distance">Pool length:</label>
+                    <input type="number" name="distance" id="distance" class="distance" step=".01"/>
+                  </div>
+                  <div>
+                    <label for="units">Units</label>
+                    <select name="units" id="units" class="units" >
+                      <option value="yards">Yards</option>
+                      <option value="meters">Meters</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn-container">
+                  <button type="button" id="submit-btn-2" class="submit-btn">Get distance</button>
+                  <button type="button" id="back-btn" class="back-btn">Go back</button>
+                </div>
+              </div>
+            </div>
+
+            <label for="lap-num">Laps:</label>
+            <input type="number" min="0" id="lap-num" name="laps" step=".01" required />
+            <button type="submit" id="submit-btn" class="submit-btn">Track daily laps</button>
+            <p id="temp"></p>
+
+      </form>
+      </main>
+    <!-- <form id="other-pool-form" class="other-pool-form"> -->
+    <!-- </form> -->
+    <table class="table-data">
+      <thead class="stats-header">
+        <th class="stats-heading" scope="col">Date</th>
+        <th class="stats-heading" scope="col">Laps</th>
+        <th class="stats-heading" scope="col">Miles</th>
+      </thead>
+      <tbody class="stats-el" id="stats-el">  
+          <!-- Rendered in JavaScript -->
+      </tbody>
+      <tfoot>
+        <tr class="total-el">
+          <td colspan="3">Total miles: <span id="total-el"></span></td>
+        </tr>
+      </tfoot>
+    </table>
+    <script src="./main.jsx" type="module"></script>
+</body>
+</html>
