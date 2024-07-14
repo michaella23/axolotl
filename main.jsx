@@ -104,6 +104,9 @@ function getTotalYards(pool) {
     case "eddy":
       yards = 66;
       break
+    case "ramsey":
+      yards = 66;
+      break
     case "other":
       if (poolNameEl.value && distance.value) {
         yards = getPoolDetails()
